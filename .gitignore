@@ -1,0 +1,14 @@
+/vendor
+/node_modules
+/public/storage
+/public/js
+/public/css
+/public/build
+/nbproject
+Homestead.yaml
+Homestead.json
+.env
+.idea
+npm-debug.log
+/angular/aot
+/angular/ngfactory
