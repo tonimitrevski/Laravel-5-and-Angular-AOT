@@ -6,8 +6,11 @@
     <body>
     <hello-world-app></hello-world-app>
     <component2></component2>
-    <script src="polyfill.bundle.js"></script>
-    <script src="home.aot.bundle.js"></script>
-
     </body>
+    <script src="{{ asset('polyfill.bundle.js') }}"></script>
+    @if (App::environment('production'))
+        <script src="{{ elixir('home.aot.bundle.js') }}"></script>
+    @else
+        <script src="{{ asset('home.bundle.js') }}"></script>
+    @endif
 </html>

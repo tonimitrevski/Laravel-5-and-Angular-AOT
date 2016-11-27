@@ -1,7 +1,4 @@
 var elixir = require('laravel-elixir');
-var webpack = require('webpack');
-require('laravel-elixir-webpack-ex');
-
 /*
  |--------------------------------------------------------------------------
  | Elixir Asset Management
@@ -14,5 +11,7 @@ require('laravel-elixir-webpack-ex');
  */
 
 elixir(function(mix) {
-    mix.sass('app.scss');
+    mix.version([
+        'home.aot.bundle.js'
+    ]);
 });
