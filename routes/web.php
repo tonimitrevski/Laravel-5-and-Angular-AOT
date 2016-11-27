@@ -11,15 +11,8 @@
 |
 */
 
-// put all your REST routes inside api-group
-Route::group(['prefix' => 'api'], function() {
-    // Route::resource('employees', 'EmployeesController');
-});
+Route::get('/', [
+    'as' => 'home',
+    'uses' => 'HomeController@index'
+]);
 
-Auth::routes();
-
-// this route is for Angular and it should be placed after all other back end routes
-// just keep it at the bottom
-Route::get('/{any}', function ($any) {
-    return view('welcome');
-})->where('any', '.*');
