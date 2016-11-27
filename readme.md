@@ -13,3 +13,11 @@ All angular acode is in the angular folder
 npm install
 
 npm run webpack-prod
+
+## Credits
+
+This project was inspired by the following projects.
+
+[Angular 2 AOT (Ahead Of Time)](https://github.com/blacksonic/angular2-aot-webpack)
+
+
