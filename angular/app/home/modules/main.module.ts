@@ -4,7 +4,7 @@ import { HelloWorldComponent } from '../components/component1/hello-world.compon
 import {Component2} from "../components/component2/hello-world.component";
 
 @NgModule({
-  bootstrap: [HelloWorldComponent, Component2],
+  bootstrap: [HelloWorldComponent],
   declarations: [HelloWorldComponent, Component2],
   imports: [BrowserModule],
   providers: []

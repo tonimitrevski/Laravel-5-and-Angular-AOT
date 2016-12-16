@@ -5,7 +5,6 @@
     </head>
     <body>
     <hello-world-app></hello-world-app>
-    <component2></component2>
     </body>
     <script src="{{ asset('polyfill.bundle.js') }}"></script>
     @if (App::environment('production'))

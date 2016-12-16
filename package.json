@@ -5,9 +5,9 @@
   "scripts": {
     "ngc": "ngc -p tsconfig.aot.json",
     "build": "npm run ngc && npm run webpack-prod && gulp --production",
-    "webpack": "webpack --config angular/webpack.config.js",
-    "webpack-aot": "webpack --config angular/webpack.aot.config.js",
-    "webpack-prod": "webpack --config angular/webpack.prod.config.js"
+    "webpack": "npm run ngc && webpack --config angular/webpack.config.js",
+    "webpack-aot": "npm run ngc && webpack --config angular/webpack.aot.config.js",
+    "webpack-prod": "npm run ngc && webpack --config angular/webpack.prod.config.js"
   },
   "keywords": [
     "angular2",

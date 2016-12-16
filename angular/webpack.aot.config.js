@@ -15,7 +15,7 @@ module.exports = {
     new ngtools.AotPlugin({
       tsConfigPath: path.join(process.cwd(), 'tsconfig.aot.json'),
       baseDir: process.cwd(),
-      entryModule: path.join(process.cwd(), 'angular', 'app', 'modules', 'main.module') + '#MainModule'
+      entryModule: path.join(process.cwd(), 'angular', 'app', 'home', 'modules', 'main.module') + '#MainModule'
     })
   ]),
 
