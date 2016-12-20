@@ -1,8 +1,6 @@
 'use strict';
 
-var path = require('path');
-
-console.log(path.join(process.cwd()));
+let path = require('path');
 
 module.exports = {
   path: path.join(process.cwd(), 'public'),

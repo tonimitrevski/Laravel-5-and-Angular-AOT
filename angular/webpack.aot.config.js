@@ -1,27 +1,25 @@
 'use strict';
-var path = require('path');
-var ngtools = require('@ngtools/webpack');
+let path = require('path');
+let ngtools = require('@ngtools/webpack');
 
 module.exports = {
-  entry: require('./webpack/entry'),
+    entry: require('./webpack/entry.aot'),
 
-  context: path.join(process.cwd(), 'angular/app'),
+    context: path.join(process.cwd(), 'angular/app'),
 
-  output: require('./webpack/output'),
+    output: require('./webpack/output'),
 
-  module: require('./webpack/module'),
+    module: require('./webpack/module.aot'),
 
-  plugins: require('./webpack/plugins').concat([
-    new ngtools.AotPlugin({
-      tsConfigPath: path.join(process.cwd(), 'tsconfig.aot.json'),
-      baseDir: process.cwd(),
-      entryModule: path.join(process.cwd(), 'angular', 'app', 'home', 'modules', 'main.module') + '#MainModule'
-    })
-  ]),
+    plugins: require('./webpack/plugins').concat([
+        new ngtools.AotPlugin({
+            tsConfigPath: path.join(process.cwd(), 'tsconfig.aot.json')
+        })
+    ]),
 
-  resolve: require('./webpack/resolve'),
+    resolve: require('./webpack/resolve'),
 
-  stats: 'errors-only',
+    stats: 'errors-only',
 
-  devtool: 'source-map'
+    devtool: 'source-map'
 };

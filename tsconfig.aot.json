@@ -3,32 +3,34 @@
     "target": "es5",
     "module": "es2015",
     "moduleResolution": "node",
-    "declaration": false,
-    "removeComments": true,
+    "declaration": true,
+    "noImplicitAny": false,
+    "sourceMap": true,
+    "mapRoot": "",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "sourceMap": true,
-    "pretty": true,
-    "allowUnreachableCode": false,
-    "allowUnusedLabels": false,
-    "noImplicitAny": true,
-    "noImplicitReturns": true,
-    "noImplicitUseStrict": false,
-    "noFallthroughCasesInSwitch": true,
     "outDir": "./angular/ngfactory",
     "typeRoots": [ "node_modules/@types" ],
     "types": [
-      "core-js",
       "node"
+    ],
+    "lib": [
+      "dom",
+      "es2015"
     ]
   },
   "angularCompilerOptions": {
     "genDir": "angular/aot",
-    "skipMetadataEmit" : true
+    "entryModule": "angular/app/modules/main.module.ts#MainModule",
+    "debug": false
   },
   "compileOnSave": false,
   "exclude": [
     "node_modules",
-    "vendor"
+    "vendor",
+    "**/*.ngfactory.ts",
+    "**/*.shim.ts",
+    "angular/app/bootstrap*.ts",
+    "angular/app/polyfill.ts"
   ]
 }

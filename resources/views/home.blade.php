@@ -10,6 +10,6 @@
     @if (App::environment('production'))
         <script src="{{ elixir('home.aot.bundle.js') }}"></script>
     @else
-        <script src="{{ asset('home.bundle.js') }}"></script>
+        <script src="{{ asset('home.aot.bundle.js') }}"></script>
     @endif
 </html>

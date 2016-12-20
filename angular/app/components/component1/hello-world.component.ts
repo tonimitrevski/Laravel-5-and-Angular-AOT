@@ -5,9 +5,7 @@ import { Component } from '@angular/core';
   templateUrl: 'hello-world.template.html'
 })
 export class HelloWorldComponent {
-  constructor() {
-    console.log(document.querySelector('hello-world-app').innerHTML);
-  }
+  constructor() {}
 
 
 

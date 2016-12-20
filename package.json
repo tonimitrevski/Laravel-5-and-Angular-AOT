@@ -31,7 +31,7 @@
   "devDependencies": {
     "@angular/compiler-cli": "2.2.3",
     "@angular/platform-server": "2.2.3",
-    "@ngtools/webpack": "1.1.7",
+    "@ngtools/webpack": "1.1.9",
     "@types/core-js": "0.9.34",
     "@types/node": "6.0.51",
     "angular2-template-loader": "0.6.0",
