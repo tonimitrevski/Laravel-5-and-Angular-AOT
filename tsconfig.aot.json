@@ -9,7 +9,7 @@
     "mapRoot": "",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "outDir": "./angular/ngfactory",
+    "outDir": ".resources/assets/angular/ngfactory",
     "typeRoots": [ "node_modules/@types" ],
     "types": [
       "node"
@@ -20,7 +20,7 @@
     ]
   },
   "angularCompilerOptions": {
-    "genDir": "angular/aot",
+    "genDir": "resources/assets/angular/aot",
     "debug": false
   },
   "compileOnSave": false,
@@ -29,7 +29,7 @@
     "vendor",
     "**/*.ngfactory.ts",
     "**/*.shim.ts",
-    "angular/app/bootstrap*.ts",
-    "angular/app/polyfill.ts"
+    "resources/assets/angular/app/bootstrap*.ts",
+    "resources/assets/angular/app/polyfill.ts"
   ]
 }

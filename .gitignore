@@ -10,8 +10,8 @@ Homestead.json
 .env
 .idea
 npm-debug.log
-/angular/aot
-/angular/ngfactory
+/resources/assets/angular/aot
+/resources/assets/angular/ngfactory
 .phpstorm.meta.php
 _ide_helper.php
 public/home.aot.bundle.js
@@ -20,3 +20,4 @@ public/home.bundle.js
 public/home.bundle.js.map
 public/polyfill.bundle.js
 public/polyfill.bundle.js.map
+.resources/

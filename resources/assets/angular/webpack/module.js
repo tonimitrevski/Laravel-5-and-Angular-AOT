@@ -15,12 +15,12 @@ module.exports = {
       },
       {
           test: /\.css$/,
-          include: path.resolve(process.cwd(), 'angular/app'),
+          include: path.resolve(process.cwd(), 'resources/assets/angular/app'),
           loaders: ['to-string-loader', 'css-loader']
       },
       {
           test: /\.css$/,
-          exclude: path.resolve(process.cwd(), 'angular/app'),
+          exclude: path.resolve(process.cwd(), 'resources/assets/angular/app'),
           loader: ExtractTextPlugin.extract({
               fallbackLoader: 'style-loader',
               loader: 'css-loader'

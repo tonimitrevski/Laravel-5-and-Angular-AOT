@@ -4,7 +4,7 @@ var path = require('path');
 module.exports = {
   entry: require('./webpack/entry'),
 
-  context: path.join(process.cwd(), 'angular/app'),
+  context: path.join(process.cwd(), 'resources/assets/angular/app'),
 
   output: require('./webpack/output'),
 
@@ -13,8 +13,6 @@ module.exports = {
   plugins: require('./webpack/plugins'),
 
   resolve: require('./webpack/resolve'),
-
-  devServer: require('./webpack/dev-server'),
 
   stats: 'errors-only',
 
