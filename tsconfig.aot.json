@@ -21,7 +21,6 @@
   },
   "angularCompilerOptions": {
     "genDir": "angular/aot",
-    "entryModule": "angular/app/modules/main.module.ts#MainModule",
     "debug": false
   },
   "compileOnSave": false,

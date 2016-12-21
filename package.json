@@ -6,7 +6,6 @@
     "ngc": "ngc -p tsconfig.aot.json",
     "build": "npm run ngc && npm run webpack-prod && gulp --production",
     "webpack": "npm run ngc && webpack --config angular/webpack.config.js",
-    "webpack-aot": "npm run ngc && webpack --config angular/webpack.aot.config.js",
     "webpack-prod": "npm run ngc && webpack --config angular/webpack.prod.config.js"
   },
   "keywords": [
@@ -19,28 +18,27 @@
     "email": "mitrevski@mail.com"
   },
   "dependencies": {
-    "@angular/common": "2.2.3",
-    "@angular/compiler": "2.2.3",
-    "@angular/core": "2.2.3",
-    "@angular/platform-browser": "2.2.3",
-    "@angular/platform-browser-dynamic": "2.2.3",
+    "@angular/common": "2.4.0",
+    "@angular/compiler": "2.4.0",
+    "@angular/core": "2.4.0",
+    "@angular/platform-browser": "2.4.0",
+    "@angular/platform-browser-dynamic": "2.4.0",
     "core-js": "2.4.1",
-    "rxjs": "5.0.0-beta.12",
-    "zone.js": "0.6.21"
+    "rxjs": "5.0.1",
+    "zone.js": "0.7.4"
   },
   "devDependencies": {
-    "@angular/compiler-cli": "2.2.3",
-    "@angular/platform-server": "2.2.3",
-    "@ngtools/webpack": "1.1.9",
-    "@types/core-js": "0.9.34",
-    "@types/node": "6.0.51",
+    "@angular/compiler-cli": "2.4.0",
+    "@angular/platform-server": "2.4.0",
+    "@types/core-js": "0.9.35",
+    "@types/node": "6.0.52",
     "angular2-template-loader": "0.6.0",
     "awesome-typescript-loader": "2.2.4",
     "bootstrap-sass": "^3.3.7",
     "chokidar": "1.6.1",
     "concurrently": "3.1.0",
     "copy-webpack-plugin": "4.0.1",
-    "css-loader": "0.26.0",
+    "css-loader": "0.26.1",
     "extract-text-webpack-plugin": "2.0.0-beta.4",
     "gh-pages": "0.12.0",
     "gulp": "^3.9.1",
