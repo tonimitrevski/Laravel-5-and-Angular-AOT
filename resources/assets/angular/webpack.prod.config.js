@@ -3,7 +3,7 @@ var path = require('path');
 var webpack = require('webpack');
 
 module.exports = {
-  entry: require('./webpack/entry'),
+  entry: require('./webpack/entry.prod'),
 
   context: path.join(process.cwd(), 'resources/assets/angular/app'),
 

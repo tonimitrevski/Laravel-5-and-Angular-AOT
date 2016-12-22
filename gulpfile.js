@@ -12,6 +12,6 @@ var elixir = require('laravel-elixir');
 
 elixir(function(mix) {
     mix.version([
-        'home.aot.bundle.js'
+        'js/home.bundle.js'
     ]);
 });

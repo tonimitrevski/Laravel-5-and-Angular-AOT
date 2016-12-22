@@ -9,7 +9,7 @@
     "mapRoot": "",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "outDir": ".resources/assets/angular/ngfactory",
+    "outDir": "resources/assets/angular/ngfactory",
     "typeRoots": [ "node_modules/@types" ],
     "types": [
       "node"
@@ -29,7 +29,7 @@
     "vendor",
     "**/*.ngfactory.ts",
     "**/*.shim.ts",
-    "resources/assets/angular/app/bootstrap*.ts",
-    "resources/assets/angular/app/polyfill.ts"
+    "resources/assets/angular/**/bootstrap*.ts",
+    "resources/assets/angular/**/polyfill.ts"
   ]
 }
