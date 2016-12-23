@@ -5,7 +5,7 @@
   "scripts": {
     "ngc": "ngc -p tsconfig.aot.json",
     "dev": "webpack --config resources/assets/angular/webpack.config.js",
-    "build": "npm run ngc && npm run ngc && webpack --config resources/assets/angular/webpack.prod.config.js && gulp --production"
+    "build": "npm run ngc && webpack --config resources/assets/angular/webpack.prod.config.js && gulp --production"
   },
   "keywords": [
     "angular2",
@@ -31,7 +31,7 @@
     "@angular/router": "^3.4.1",
     "@angular/upgrade": "^2.4.1",
     "core-js": "2.4.1",
-    "rxjs": "5.0.1",
+    "rxjs": "5.0.2",
     "zone.js": "0.7.4"
   },
   "devDependencies": {
@@ -41,20 +41,16 @@
     "@types/node": "6.0.52",
     "angular2-template-loader": "0.6.0",
     "awesome-typescript-loader": "2.2.4",
-    "bootstrap-sass": "^3.3.7",
-    "chokidar": "1.6.1",
-    "concurrently": "3.1.0",
     "copy-webpack-plugin": "4.0.1",
     "css-loader": "0.26.1",
     "extract-text-webpack-plugin": "2.0.0-beta.4",
-    "gh-pages": "0.12.0",
     "gulp": "^3.9.1",
-    "http-server": "0.9.0",
     "jquery": "^3.1.0",
     "laravel-elixir": "^6.0.0-14",
     "laravel-elixir-webpack-official": "^1.0.9",
     "lodash": "^4.16.2",
     "raw-loader": "0.5.1",
+    "sass-loader": "^4.1.1",
     "source-map-explorer": "1.3.3",
     "style-loader": "0.13.1",
     "to-string-loader": "1.1.5",
