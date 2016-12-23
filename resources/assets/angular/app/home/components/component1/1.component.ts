@@ -9,6 +9,8 @@ import {GlobalService} from "../../services/global.service";
 export class Component1 {
     constructor(public global: GlobalService) {}
 
+    condition: number = 1;
+
     showP() {
         this.global.click = false;
     }

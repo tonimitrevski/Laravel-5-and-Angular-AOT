@@ -1,3 +1,5 @@
 <h1>Hello World!</h1>
 <a (click)="showP()" href="javascript:;">Click false</a>
-<p class="example" *ngIf="!global.click">Show if click == false</p>
+<div *appMyDIrective="condition">
+    <p class="example" *ngIf="!global.click">Show if click == false</p>
+</div>
