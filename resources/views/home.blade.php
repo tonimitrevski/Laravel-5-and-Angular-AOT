@@ -4,7 +4,8 @@
         <base href='/'>
     </head>
     <body>
-    <hello-world-app></hello-world-app>
+    <component1></component1>
+    <component2></component2>
     </body>
     <script src="{{ asset('js/polyfill.bundle.js') }}"></script>
     @if (App::environment('production'))
