@@ -1,15 +1,19 @@
 {
-  "compileOnSave": false,
-  "buildOnSave": false,
   "compilerOptions": {
+    "baseUrl": "",
     "target": "es5",
     "module": "es2015",
     "moduleResolution": "node",
-    "removeComments": true,
+    "declaration": true,
+    "noImplicitAny": false,
+    "sourceMap": true,
+    "mapRoot": "",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "sourceMap": true,
-    "typeRoots": [ "node_modules/@types" ],
+    "outDir": "resources/assets/angular/ngfactory",
+    "rootDir": "./",
+    "skipLibCheck": true,
+    "typeRoots": [ "./node_modules/@types" ],
     "types": [
       "node"
     ],
@@ -18,13 +22,23 @@
       "es2015"
     ]
   },
-  "files": [],
+  "compileOnSave": false,
+  "buildOnSave": false,
   "exclude": [
     "node_modules",
-    "vendor"
+    "vendor",
+    "**/*.ngfactory.ts",
+    "**/*.shim.ts",
+    "resources/assets/angular/**/bootstrap*.ts",
+    "resources/assets/angular/**/polyfill.ts",
+    "dist"
   ],
   "awesomeTypescriptLoaderOptions": {
     "forkChecker": true,
     "useWebpackText": true
+  },
+  "angularCompilerOptions": {
+    "genDir": "resources/assets/angular/aot",
+    "debug": false
   }
 }
