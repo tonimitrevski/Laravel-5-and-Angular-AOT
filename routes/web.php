@@ -15,3 +15,8 @@ Route::get('/', [
     'as' => 'home',
     'uses' => 'HomeController@index'
 ]);
+
+Route::get('dinamic-component', [
+    'as' => 'dinamic',
+    'uses' => 'HomeController@dinamic'
+]);
