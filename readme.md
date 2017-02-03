@@ -1,8 +1,8 @@
-# Laravel 5.3 + Angular 2 AOT (Ahead Of Time) with Webpack 
+# Laravel 5.4 + Angular AOT (Ahead Of Time) with Webpack 
 
 ![alt tag](http://i.imgur.com/3sileJw.png)
 
-This is a  Laravel5 + Angular2 projects.
+This is a Laravel 5 and Angular projects.
 
 ### Code
 ____
@@ -12,7 +12,7 @@ All angular code is in the resource/assets/angular
 ____
 1. Install laravel application
 - composer install
-- cp .env.example .env
+- copy .env.example to .env
 - php artisan key:generate
 
 2. Install npm packed
@@ -20,7 +20,7 @@ ____
 
 3. For compile angular user
 - for develop (npm run dev)
-- for production (npm run build)
+- for production (npm run production)
 
 #####enjoy!
 
