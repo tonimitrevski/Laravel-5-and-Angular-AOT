@@ -100,66 +100,69 @@ class View_Component21 extends import1.AppView<any> {
 }
 var renderType_Component2:import2.RenderComponentType = import3.createRenderComponentType('',0,import4.ViewEncapsulation.None,styles_Component2,{});
 export class View_Component20 extends import1.AppView<import0.Component2> {
-  _text_0:any;
-  _el_1:any;
+  _el_0:any;
+  _text_1:any;
   _text_2:any;
-  _text_3:any;
-  _el_4:any;
+  _el_3:any;
+  _text_4:any;
   _text_5:any;
-  _text_6:any;
-  _anchor_7:any;
-  /*private*/ _vc_7:import9.ViewContainer;
-  _TemplateRef_7_5:any;
-  _NgIf_7_6:import10.Wrapper_NgIf;
+  _anchor_6:any;
+  /*private*/ _vc_6:import9.ViewContainer;
+  _TemplateRef_6_5:any;
+  _NgIf_6_6:import10.Wrapper_NgIf;
+  _text_7:any;
+  _el_8:any;
   constructor(viewUtils:import3.ViewUtils,parentView:import1.AppView<any>,parentIndex:number,parentElement:any) {
     super(View_Component20,renderType_Component2,import5.ViewType.COMPONENT,viewUtils,parentView,parentIndex,parentElement,import6.ChangeDetectorStatus.CheckAlways);
   }
   createInternal(rootSelector:string):import7.ComponentRef<any> {
     const parentRenderNode:any = this.renderer.createViewRoot(this.parentElement);
-    this._text_0 = this.renderer.createText(parentRenderNode,'\n',(null as any));
-    this._el_1 = import3.createRenderElement(this.renderer,parentRenderNode,'h1',import3.EMPTY_INLINE_ARRAY,(null as any));
-    this._text_2 = this.renderer.createText(this._el_1,'Component2!',(null as any));
-    this._text_3 = this.renderer.createText(parentRenderNode,'\n',(null as any));
-    this._el_4 = import3.createRenderElement(this.renderer,parentRenderNode,'a',new import3.InlineArray2(2,'href','javascript:;'),(null as any));
-    this._text_5 = this.renderer.createText(this._el_4,'Click true',(null as any));
-    this._text_6 = this.renderer.createText(parentRenderNode,'\n',(null as any));
-    this._anchor_7 = this.renderer.createTemplateAnchor(parentRenderNode,(null as any));
-    this._vc_7 = new import9.ViewContainer(7,(null as any),this,this._anchor_7);
-    this._TemplateRef_7_5 = new import11.TemplateRef_(this,7,this._anchor_7);
-    this._NgIf_7_6 = new import10.Wrapper_NgIf(this._vc_7.vcRef,this._TemplateRef_7_5);
-    var disposable_0:Function = import3.subscribeToRenderElement(this,this._el_4,new import3.InlineArray2(2,'click',(null as any)),this.eventHandler(this.handleEvent_4));
+    this._el_0 = import3.createRenderElement(this.renderer,parentRenderNode,'h1',import3.EMPTY_INLINE_ARRAY,(null as any));
+    this._text_1 = this.renderer.createText(this._el_0,'Component2!',(null as any));
+    this._text_2 = this.renderer.createText(parentRenderNode,'\n',(null as any));
+    this._el_3 = import3.createRenderElement(this.renderer,parentRenderNode,'a',new import3.InlineArray2(2,'href','javascript:;'),(null as any));
+    this._text_4 = this.renderer.createText(this._el_3,'Click true',(null as any));
+    this._text_5 = this.renderer.createText(parentRenderNode,'\n',(null as any));
+    this._anchor_6 = this.renderer.createTemplateAnchor(parentRenderNode,(null as any));
+    this._vc_6 = new import9.ViewContainer(6,(null as any),this,this._anchor_6);
+    this._TemplateRef_6_5 = new import11.TemplateRef_(this,6,this._anchor_6);
+    this._NgIf_6_6 = new import10.Wrapper_NgIf(this._vc_6.vcRef,this._TemplateRef_6_5);
+    this._text_7 = this.renderer.createText(parentRenderNode,'\n',(null as any));
+    this._el_8 = import3.createRenderElement(this.renderer,parentRenderNode,'a',new import3.InlineArray2(2,'href','google.com'),(null as any));
+    var disposable_0:Function = import3.subscribeToRenderElement(this,this._el_3,new import3.InlineArray2(2,'click',(null as any)),this.eventHandler(this.handleEvent_3));
     this.init((null as any),((<any>this.renderer).directRenderer? (null as any): [
-      this._text_0,
-      this._el_1,
+      this._el_0,
+      this._text_1,
       this._text_2,
-      this._text_3,
-      this._el_4,
+      this._el_3,
+      this._text_4,
       this._text_5,
-      this._text_6,
-      this._anchor_7
+      this._anchor_6,
+      this._text_7,
+      this._el_8
     ]
     ),[disposable_0]);
     return (null as any);
   }
   injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
-    if (((token === import11.TemplateRef) && (7 === requestNodeIndex))) { return this._TemplateRef_7_5; }
-    if (((token === import12.NgIf) && (7 === requestNodeIndex))) { return this._NgIf_7_6.context; }
+    if (((token === import11.TemplateRef) && (6 === requestNodeIndex))) { return this._TemplateRef_6_5; }
+    if (((token === import12.NgIf) && (6 === requestNodeIndex))) { return this._NgIf_6_6.context; }
     return notFoundResult;
   }
   detectChangesInternal(throwOnChange:boolean):void {
-    const currVal_7_0_0:any = this.context.global.click;
-    this._NgIf_7_6.check_ngIf(currVal_7_0_0,throwOnChange,false);
-    this._NgIf_7_6.ngDoCheck(this,this._anchor_7,throwOnChange);
-    this._vc_7.detectChangesInNestedViews(throwOnChange);
+    const currVal_6_0_0:any = this.context.global.click;
+    this._NgIf_6_6.check_ngIf(currVal_6_0_0,throwOnChange,false);
+    this._NgIf_6_6.ngDoCheck(this,this._anchor_6,throwOnChange);
+    this._vc_6.detectChangesInNestedViews(throwOnChange);
   }
   destroyInternal():void {
-    this._vc_7.destroyNestedViews();
+    this._vc_6.destroyNestedViews();
   }
   createEmbeddedViewInternal(nodeIndex:number):import1.AppView<any> {
-    if ((nodeIndex == 7)) { return new View_Component21(this.viewUtils,this,7,this._anchor_7,this._vc_7); }
+    if ((nodeIndex == 6)) { return new View_Component21(this.viewUtils,this,6,this._anchor_6,this._vc_6); }
     return (null as any);
   }
-  handleEvent_4(eventName:string,$event:any):boolean {
+  handleEvent_3(eventName:string,$event:any):boolean {
     this.markPathToRootAsCheckOnce();
     var result:boolean = true;
     if ((eventName == 'click')) {

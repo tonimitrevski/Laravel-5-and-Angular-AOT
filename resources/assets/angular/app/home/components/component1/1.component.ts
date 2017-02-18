@@ -3,7 +3,8 @@ import {GlobalService} from "../../services/global.service";
 
 @Component({
     selector: 'component1',
-    templateUrl: '1.template.html'
+    templateUrl: '1.template.html',
+    styleUrls: ['./component1.css']
 })
 export class Component1 {
     constructor(public global: GlobalService) {}

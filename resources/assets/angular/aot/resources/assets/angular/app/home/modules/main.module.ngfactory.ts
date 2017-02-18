@@ -60,7 +60,7 @@ class MainModuleInjector extends import0.NgModuleInjector<import1.MainModule> {
   __HAMMER_GESTURE_CONFIG_14:import10.HammerGestureConfig;
   __EVENT_MANAGER_PLUGINS_15:any[];
   __EventManager_16:import11.EventManager;
-  __DomSharedStylesHost_17:import12.DomSharedStylesHost;
+  _DomSharedStylesHost_17:import12.DomSharedStylesHost;
   __AnimationDriver_18:any;
   __DomRootRenderer_19:import13.DomRootRenderer_;
   __RootRenderer_20:any;
@@ -126,10 +126,6 @@ class MainModuleInjector extends import0.NgModuleInjector<import1.MainModule> {
     if ((this.__EventManager_16 == null)) { (this.__EventManager_16 = new import11.EventManager(this._EVENT_MANAGER_PLUGINS_15,this.parent.get(import27.NgZone))); }
     return this.__EventManager_16;
   }
-  get _DomSharedStylesHost_17():import12.DomSharedStylesHost {
-    if ((this.__DomSharedStylesHost_17 == null)) { (this.__DomSharedStylesHost_17 = new import12.DomSharedStylesHost(this._DOCUMENT_13)); }
-    return this.__DomSharedStylesHost_17;
-  }
   get _AnimationDriver_18():any {
     if ((this.__AnimationDriver_18 == null)) { (this.__AnimationDriver_18 = import4._resolveDefaultAnimationDriver()); }
     return this.__AnimationDriver_18;
@@ -187,6 +183,7 @@ class MainModuleInjector extends import0.NgModuleInjector<import1.MainModule> {
     this._ApplicationInitStatus_7 = new import6.ApplicationInitStatus(this.parent.get(import6.APP_INITIALIZER,(null as any)));
     this._Testability_8 = new import7.Testability(this.parent.get(import27.NgZone));
     this._ApplicationRef__9 = new import8.ApplicationRef_(this.parent.get(import27.NgZone),this.parent.get(import29.Console),this,this._ErrorHandler_6,this,this._ApplicationInitStatus_7,this.parent.get(import7.TestabilityRegistry,(null as any)),this._Testability_8);
+    this._DomSharedStylesHost_17 = new import12.DomSharedStylesHost(this._DOCUMENT_13);
     return this._MainModule_3;
   }
   getInternal(token:any,notFoundResult:any):any {
@@ -224,6 +221,7 @@ class MainModuleInjector extends import0.NgModuleInjector<import1.MainModule> {
   }
   destroyInternal():void {
     this._ApplicationRef__9.ngOnDestroy();
+    this._DomSharedStylesHost_17.ngOnDestroy();
   }
 }
 export const MainModuleNgFactory:import0.NgModuleFactory<import1.MainModule> = new import0.NgModuleFactory(MainModuleInjector,import1.MainModule);

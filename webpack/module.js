@@ -10,10 +10,6 @@ module.exports = {
           use: ['awesome-typescript-loader', 'angular2-template-loader']
       },
       {
-          test: /\.html$/,
-          use: 'raw-loader'
-      },
-      {
           test: /\.css$/,
           include: path.resolve(process.cwd(), 'resources/assets/angular/app'),
           loaders: ['to-string-loader', 'css-loader']

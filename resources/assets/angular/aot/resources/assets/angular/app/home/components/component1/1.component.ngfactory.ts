@@ -14,15 +14,16 @@ import * as import5 from '@angular/core/src/linker/view_type';
 import * as import6 from '@angular/core/src/change_detection/constants';
 import * as import7 from '@angular/core/src/linker/component_factory';
 import * as import8 from '../../../../../../../../app/home/services/global.service';
-import * as import9 from '@angular/core/src/linker/view_container';
-import * as import10 from '../../../../../../../node_modules/@angular/common/src/directives/ng_if.ngfactory';
-import * as import11 from '@angular/core/src/linker/template_ref';
-import * as import12 from '@angular/common/src/directives/ng_if';
-import * as import13 from '../../directives/my.directive.ngfactory';
-import * as import14 from '../../directives/popover.directive.ngfactory';
-import * as import15 from '@angular/core/src/linker/component_factory_resolver';
-import * as import16 from '../../../../../../../../app/home/directives/my.directive';
-import * as import17 from '../../../../../../../../app/home/directives/popover.directive';
+import * as import9 from './component1.css.shim.ngstyle';
+import * as import10 from '@angular/core/src/linker/view_container';
+import * as import11 from '../../../../../../../node_modules/@angular/common/src/directives/ng_if.ngfactory';
+import * as import12 from '@angular/core/src/linker/template_ref';
+import * as import13 from '@angular/common/src/directives/ng_if';
+import * as import14 from '../../directives/my.directive.ngfactory';
+import * as import15 from '../../directives/popover.directive.ngfactory';
+import * as import16 from '@angular/core/src/linker/component_factory_resolver';
+import * as import17 from '../../../../../../../../app/home/directives/my.directive';
+import * as import18 from '../../../../../../../../app/home/directives/popover.directive';
 export class Wrapper_Component1 {
   /*private*/ _eventHandler:Function;
   context:import0.Component1;
@@ -82,11 +83,11 @@ class View_Component1_Host0 extends import1.AppView<any> {
   }
 }
 export const Component1NgFactory:import7.ComponentFactory<import0.Component1> = new import7.ComponentFactory<import0.Component1>('component1',View_Component1_Host0,import0.Component1);
-const styles_Component1:any[] = ([] as any[]);
+const styles_Component1:any[] = [import9.styles];
 class View_Component12 extends import1.AppView<any> {
   _el_0:any;
   _text_1:any;
-  constructor(viewUtils:import3.ViewUtils,parentView:import1.AppView<any>,parentIndex:number,parentElement:any,declaredViewContainer:import9.ViewContainer) {
+  constructor(viewUtils:import3.ViewUtils,parentView:import1.AppView<any>,parentIndex:number,parentElement:any,declaredViewContainer:import10.ViewContainer) {
     super(View_Component12,renderType_Component1,import5.ViewType.EMBEDDED,viewUtils,parentView,parentIndex,parentElement,import6.ChangeDetectorStatus.CheckAlways,declaredViewContainer);
   }
   createInternal(rootSelector:string):import7.ComponentRef<any> {
@@ -107,20 +108,20 @@ class View_Component11 extends import1.AppView<any> {
   _el_0:any;
   _text_1:any;
   _anchor_2:any;
-  /*private*/ _vc_2:import9.ViewContainer;
+  /*private*/ _vc_2:import10.ViewContainer;
   _TemplateRef_2_5:any;
-  _NgIf_2_6:import10.Wrapper_NgIf;
+  _NgIf_2_6:import11.Wrapper_NgIf;
   _text_3:any;
-  constructor(viewUtils:import3.ViewUtils,parentView:import1.AppView<any>,parentIndex:number,parentElement:any,declaredViewContainer:import9.ViewContainer) {
+  constructor(viewUtils:import3.ViewUtils,parentView:import1.AppView<any>,parentIndex:number,parentElement:any,declaredViewContainer:import10.ViewContainer) {
     super(View_Component11,renderType_Component1,import5.ViewType.EMBEDDED,viewUtils,parentView,parentIndex,parentElement,import6.ChangeDetectorStatus.CheckAlways,declaredViewContainer);
   }
   createInternal(rootSelector:string):import7.ComponentRef<any> {
     this._el_0 = import3.createRenderElement(this.renderer,(null as any),'div',import3.EMPTY_INLINE_ARRAY,(null as any));
     this._text_1 = this.renderer.createText(this._el_0,'\n    ',(null as any));
     this._anchor_2 = this.renderer.createTemplateAnchor(this._el_0,(null as any));
-    this._vc_2 = new import9.ViewContainer(2,0,this,this._anchor_2);
-    this._TemplateRef_2_5 = new import11.TemplateRef_(this,2,this._anchor_2);
-    this._NgIf_2_6 = new import10.Wrapper_NgIf(this._vc_2.vcRef,this._TemplateRef_2_5);
+    this._vc_2 = new import10.ViewContainer(2,0,this,this._anchor_2);
+    this._TemplateRef_2_5 = new import12.TemplateRef_(this,2,this._anchor_2);
+    this._NgIf_2_6 = new import11.Wrapper_NgIf(this._vc_2.vcRef,this._TemplateRef_2_5);
     this._text_3 = this.renderer.createText(this._el_0,'\n',(null as any));
     this.init(this._el_0,((<any>this.renderer).directRenderer? (null as any): [
       this._el_0,
@@ -132,8 +133,8 @@ class View_Component11 extends import1.AppView<any> {
     return (null as any);
   }
   injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
-    if (((token === import11.TemplateRef) && (2 === requestNodeIndex))) { return this._TemplateRef_2_5; }
-    if (((token === import12.NgIf) && (2 === requestNodeIndex))) { return this._NgIf_2_6.context; }
+    if (((token === import12.TemplateRef) && (2 === requestNodeIndex))) { return this._TemplateRef_2_5; }
+    if (((token === import13.NgIf) && (2 === requestNodeIndex))) { return this._NgIf_2_6.context; }
     return notFoundResult;
   }
   detectChangesInternal(throwOnChange:boolean):void {
@@ -153,7 +154,7 @@ class View_Component11 extends import1.AppView<any> {
     return (null as any);
   }
 }
-var renderType_Component1:import2.RenderComponentType = import3.createRenderComponentType('',0,import4.ViewEncapsulation.None,styles_Component1,{});
+var renderType_Component1:import2.RenderComponentType = import3.createRenderComponentType('',0,import4.ViewEncapsulation.Emulated,styles_Component1,{});
 export class View_Component10 extends import1.AppView<import0.Component1> {
   _el_0:any;
   _text_1:any;
@@ -162,13 +163,13 @@ export class View_Component10 extends import1.AppView<import0.Component1> {
   _text_4:any;
   _text_5:any;
   _anchor_6:any;
-  /*private*/ _vc_6:import9.ViewContainer;
+  /*private*/ _vc_6:import10.ViewContainer;
   _TemplateRef_6_5:any;
-  _MyDirectiveDirective_6_6:import13.Wrapper_MyDirectiveDirective;
+  _MyDirectiveDirective_6_6:import14.Wrapper_MyDirectiveDirective;
   _text_7:any;
   _el_8:any;
-  /*private*/ _vc_8:import9.ViewContainer;
-  _PopoverDirective_8_5:import14.Wrapper_PopoverDirective;
+  /*private*/ _vc_8:import10.ViewContainer;
+  _PopoverDirective_8_5:import15.Wrapper_PopoverDirective;
   _text_9:any;
   _text_10:any;
   constructor(viewUtils:import3.ViewUtils,parentView:import1.AppView<any>,parentIndex:number,parentElement:any) {
@@ -183,13 +184,13 @@ export class View_Component10 extends import1.AppView<import0.Component1> {
     this._text_4 = this.renderer.createText(this._el_3,'Click false',(null as any));
     this._text_5 = this.renderer.createText(parentRenderNode,'\n',(null as any));
     this._anchor_6 = this.renderer.createTemplateAnchor(parentRenderNode,(null as any));
-    this._vc_6 = new import9.ViewContainer(6,(null as any),this,this._anchor_6);
-    this._TemplateRef_6_5 = new import11.TemplateRef_(this,6,this._anchor_6);
-    this._MyDirectiveDirective_6_6 = new import13.Wrapper_MyDirectiveDirective(this._TemplateRef_6_5,this._vc_6.vcRef);
+    this._vc_6 = new import10.ViewContainer(6,(null as any),this,this._anchor_6);
+    this._TemplateRef_6_5 = new import12.TemplateRef_(this,6,this._anchor_6);
+    this._MyDirectiveDirective_6_6 = new import14.Wrapper_MyDirectiveDirective(this._TemplateRef_6_5,this._vc_6.vcRef);
     this._text_7 = this.renderer.createText(parentRenderNode,'\n\n',(null as any));
     this._el_8 = import3.createRenderElement(this.renderer,parentRenderNode,'a',new import3.InlineArray4(4,'href','javascript:;','popover',''),(null as any));
-    this._vc_8 = new import9.ViewContainer(8,(null as any),this,this._el_8);
-    this._PopoverDirective_8_5 = new import14.Wrapper_PopoverDirective(this._vc_8.vcRef,this.parentView.injectorGet(import15.ComponentFactoryResolver,this.parentIndex));
+    this._vc_8 = new import10.ViewContainer(8,(null as any),this,this._el_8);
+    this._PopoverDirective_8_5 = new import15.Wrapper_PopoverDirective(this._vc_8.vcRef,this.parentView.injectorGet(import16.ComponentFactoryResolver,this.parentIndex));
     this._text_9 = this.renderer.createText(this._el_8,'Popover',(null as any));
     this._text_10 = this.renderer.createText(parentRenderNode,'\n',(null as any));
     var disposable_0:Function = import3.subscribeToRenderElement(this,this._el_3,new import3.InlineArray2(2,'click',(null as any)),this.eventHandler(this.handleEvent_3));
@@ -215,9 +216,9 @@ export class View_Component10 extends import1.AppView<import0.Component1> {
     return (null as any);
   }
   injectorGetInternal(token:any,requestNodeIndex:number,notFoundResult:any):any {
-    if (((token === import11.TemplateRef) && (6 === requestNodeIndex))) { return this._TemplateRef_6_5; }
-    if (((token === import16.MyDirectiveDirective) && (6 === requestNodeIndex))) { return this._MyDirectiveDirective_6_6.context; }
-    if (((token === import17.PopoverDirective) && ((8 <= requestNodeIndex) && (requestNodeIndex <= 9)))) { return this._PopoverDirective_8_5.context; }
+    if (((token === import12.TemplateRef) && (6 === requestNodeIndex))) { return this._TemplateRef_6_5; }
+    if (((token === import17.MyDirectiveDirective) && (6 === requestNodeIndex))) { return this._MyDirectiveDirective_6_6.context; }
+    if (((token === import18.PopoverDirective) && ((8 <= requestNodeIndex) && (requestNodeIndex <= 9)))) { return this._PopoverDirective_8_5.context; }
     return notFoundResult;
   }
   detectChangesInternal(throwOnChange:boolean):void {

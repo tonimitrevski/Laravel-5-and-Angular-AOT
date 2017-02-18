@@ -1,20 +1,4 @@
-let mix = require('laravel-mix').mix;
-let path = require('path');
-
-mix.webpackConfig({
-    context: path.join(process.cwd(), 'resources/assets/angular/app'),
-
-    module: require('./webpack/module'),
-
-    plugins: require('./webpack/plugins'),
-
-    resolve: require('./webpack/resolve'),
-
-    stats: 'errors-only',
-
-    devtool: 'source-map'
-});
-
+const { mix } = require('laravel-mix');
 /*
  |--------------------------------------------------------------------------
  | Mix Asset Management

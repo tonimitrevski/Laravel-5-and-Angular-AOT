@@ -11,7 +11,8 @@ export var Component1 = (function () {
     Component1.decorators = [
         { type: Component, args: [{
                     selector: 'component1',
-                    templateUrl: '1.template.html'
+                    templateUrl: '1.template.html',
+                    styleUrls: ['./component1.css']
                 },] },
     ];
     /** @nocollapse */
