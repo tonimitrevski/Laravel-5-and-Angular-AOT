@@ -3,10 +3,10 @@
   "scripts": {
     "ngc": "ngc",
     "cleanup": "rimraf resources/assets/angular/**/*.ngfactory.ts resources/assets/angular/**/*.ngstyle.ts resources/assets/angular/**/*.ngsummary.json resources/assets/angular/ngfactory resources/assets/angular/aot",
-    "dev": "node node_modules/cross-env/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules",
-    "watch": "node node_modules/cross-env/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules",
-    "hot": "node node_modules/cross-env/bin/cross-env.js NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot",
-    "production": "npm run cleanup && npm run ngc && node node_modules/cross-env/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules"
+    "dev": "node node_modules/cross-env/bin/cross-env.js node_modules/webpack/bin/webpack.js --progress --hide-modules",
+    "watch": "node node_modules/cross-env/bin/cross-env.js node_modules/webpack/bin/webpack.js --watch --progress --hide-modules",
+    "hot": "node node_modules/cross-env/bin/cross-env.js node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot",
+    "production": "npm run cleanup && npm run ngc && node node_modules/cross-env/bin/cross-env.js node_modules/webpack/bin/webpack.js --progress --hide-modules"
   },
   "dependencies": {
     "@angular/common": "^2.4.8",
@@ -19,7 +19,7 @@
     "@angular/router": "^3.4.8",
     "@angular/upgrade": "^2.4.8",
     "core-js": "2.4.1",
-    "rxjs": "5.1.1",
+    "rxjs": "5.2.0",
     "zone.js": "0.7.7"
   },
   "devDependencies": {
@@ -28,10 +28,10 @@
     "@types/core-js": "0.9.35",
     "@types/node": "7.0.5",
     "angular2-template-loader": "0.6.2",
-    "awesome-typescript-loader": "3.0.4",
+    "awesome-typescript-loader": "3.0.7",
     "copy-webpack-plugin": "4.0.1",
     "css-loader": "0.26.1",
-    "extract-text-webpack-plugin": "2.0.0-beta.4",
+    "extract-text-webpack-plugin": "2.0.0-rc.3",
     "jquery": "^3.1.0",
     "lodash": "^4.17.3",
     "raw-loader": "0.5.1",
