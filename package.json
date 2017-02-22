@@ -3,10 +3,10 @@
   "scripts": {
     "ngc": "ngc",
     "cleanup": "rimraf resources/assets/angular/**/*.ngfactory.ts resources/assets/angular/**/*.ngstyle.ts resources/assets/angular/**/*.ngsummary.json resources/assets/angular/ngfactory resources/assets/angular/aot",
-    "dev": "node node_modules/cross-env/bin/cross-env.js node_modules/webpack/bin/webpack.js --progress --hide-modules",
-    "watch": "node node_modules/cross-env/bin/cross-env.js node_modules/webpack/bin/webpack.js --watch --progress --hide-modules",
-    "hot": "node node_modules/cross-env/bin/cross-env.js node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot",
-    "production": "npm run cleanup && npm run ngc && node node_modules/cross-env/bin/cross-env.js node_modules/webpack/bin/webpack.js --progress --hide-modules"
+    "dev": "node node_modules/cross-env/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules",
+    "watch": "node node_modules/cross-env/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules",
+    "hot": "node node_modules/cross-env/bin/cross-env.js NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot",
+    "production": "npm run cleanup && npm run ngc && node node_modules/cross-env/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules"
   },
   "dependencies": {
     "@angular/common": "^2.4.8",
