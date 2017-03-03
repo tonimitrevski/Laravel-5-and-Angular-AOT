@@ -334,8 +334,8 @@ module.exports.plugins = (module.exports.plugins || []).concat([
     new webpack.ProgressPlugin(),
     new webpack.ContextReplacementPlugin(
         // The (\\|\/) piece accounts for path separators in *nix and Windows
-        /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
-        path.join(process.cwd(), 'resources/assets/angular/app')
+        /angular(\\|\/)core(\\|\/)@angular/,
+        path.join(process.cwd(), 'resources/assets/angular/app/')
     )
 ]);
 
