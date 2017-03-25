@@ -5,3 +5,9 @@
 </div>
 
 <a  href="javascript:;" popover>Popover</a>
+
+
+<ng-template #loading>Loading...</ng-template>
+<div *ngIf="userObservable; else loading">
+    Toni
+</div>

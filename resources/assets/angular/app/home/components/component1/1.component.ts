@@ -7,6 +7,9 @@ import {GlobalService} from "../../services/global.service";
     styleUrls: ['./component1.css']
 })
 export class Component1 {
+
+    userObservable: number | null | undefined = undefined;
+
     constructor(public global: GlobalService) {}
 
     condition: number = 1;
