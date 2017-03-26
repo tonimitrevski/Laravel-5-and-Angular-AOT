@@ -131,20 +131,29 @@ let rules = [
 
     {
         test: /\.css$/,
-        include: path.resolve(process.cwd(), ''),
+        include: path.resolve(process.cwd(), 'resources/assets/angular/app'),
         loaders: ['to-string-loader', 'css-loader']
     },
+
     {
         test: /\.css$/,
-        exclude: path.resolve(process.cwd(), ''),
+        exclude: path.resolve(process.cwd(), 'resources/assets/angular/app'),
         loader: ExtractTextPlugin.extract({
             fallback: 'style-loader',
             use: 'css-loader'
         })
     },
+
     {
         test: /\.s[ac]ss$/,
         include: /node_modules/,
+        loaders: ['style-loader', 'css-loader', 'sass-loader']
+    },
+
+    {
+        test: /\.scss$/,
+        include: path.resolve(process.cwd(), 'resources/assets/angular/app'),
+        exclude: /node_modules/,
         loaders: ['to-string-loader', 'css-loader', 'sass-loader'],
     },
 
