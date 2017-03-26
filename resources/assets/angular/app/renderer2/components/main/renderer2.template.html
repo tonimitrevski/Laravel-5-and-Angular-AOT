@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="row">
+        <div  class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">Example</div>
+                <div class="panel-body">
+                    // Create comment
+                    "let comment = this._renderer.createComment('Comment');"
+                </div>
+                <div class="panel-body">
+                    // Create text
+                    "let text = this._renderer.createText('Text');"
+                </div>
+                <div class="panel-body">
+                    // create span
+                    "let span = this._renderer.createElement('span');"
+                </div>
+                <div class="panel-body">
+                    // target class
+                    "let select = this._renderer.selectRootElement('#target');"
+                </div>
+                <div class="panel-body">
+                    //append comment into target id
+                    "this._renderer.appendChild(select, comment);"
+                </div>
+                <div class="panel-body">
+                    // append span into target id
+                    "this._renderer.appendChild(select, span);"
+                </div>
+                <div class="panel-body">
+                    // append text into span
+                    "this._renderer.appendChild(span, text);"
+                </div>
+                <div class="panel-body">
+                    // listen click
+                    this._renderer.listen(span, 'click', function())
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div  class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">Renderer2</div>
+                <div id="target" class="panel-body"></div>
+            </div>
+        </div>
+    </div>
+</div>

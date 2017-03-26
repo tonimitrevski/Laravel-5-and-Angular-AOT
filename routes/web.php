@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('renderer2', [
+    'as' => 'renderer2','uses' => 'Renderer2Controller@index'
+]);
