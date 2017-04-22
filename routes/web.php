@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::get('renderer2', [
     'as' => 'renderer2','uses' => 'Renderer2Controller@index'
 ]);
+
+Route::get('reactive-form', [
+    'as' => 'reactive-form','uses' => 'ReactiveFormController@index'
+]);

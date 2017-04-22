@@ -49,6 +49,7 @@
                     <!-- Right Side Of Navbar -->
                     <ul class="nav navbar-nav navbar-right">
                         <li class="{{ $renderer2 or '' }}"><a href="{{ route('renderer2') }}">Renderer2</a></li>
+                        <li class="{{ $reactiveForm or '' }}"><a href="{{ route('reactive-form') }}">Reactive Form</a></li>
                     </ul>
                 </div>
             </div>

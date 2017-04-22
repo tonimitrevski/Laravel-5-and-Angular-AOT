@@ -26,6 +26,7 @@ Example
 1. Renderer2
 - url(renderer2) 
 
+Watch [DEMO](http://angular-laravel.webless.tk)
 
 ####enjoy!
 

@@ -3,7 +3,24 @@ let glob = require('glob');
 let webpack = require('webpack');
 let Mix = require('laravel-mix').config;
 let webpackPlugins = require('laravel-mix').plugins;
+let dotenv = require('dotenv');
 let ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+/*
+ |--------------------------------------------------------------------------
+ | Load Environment Variables
+ |--------------------------------------------------------------------------
+ |
+ | Load environment variables from .env file. dotenv will never modify
+ | any environment variables that have already been set.
+ |
+ */
+
+dotenv.config({
+    path: Mix.Paths.root('.env')
+});
+
+
 
 /*
  |--------------------------------------------------------------------------
@@ -46,7 +63,7 @@ module.exports.context = Mix.Paths.root();
  |
  */
 
-module.exports.entry = Mix.entry();
+module.exports.entry = Mix.entry().get();
 
 
 
@@ -99,6 +116,10 @@ let rules = [
                     use: 'css-loader!sass-loader?indentedSyntax',
                     fallback: 'vue-style-loader'
                 }),
+                less: vueExtractTextPlugin.extract({
+                    use: 'css-loader!less-loader',
+                    fallback: 'vue-style-loader'
+                }),
                 stylus: vueExtractTextPlugin.extract({
                     use: 'css-loader!stylus-loader?paths[]=node_modules',
                     fallback: 'vue-style-loader'
@@ -111,10 +132,15 @@ let rules = [
                 js: 'babel-loader' + Mix.babelConfig(),
                 scss: 'vue-style-loader!css-loader!sass-loader',
                 sass: 'vue-style-loader!css-loader!sass-loader?indentedSyntax',
+                less: 'vue-style-loader!css-loader!less-loader',
                 stylus: 'vue-style-loader!css-loader!stylus-loader?paths[]=node_modules'
             },
 
-            postcss: Mix.options.postCss
+            postcss: Mix.options.postCss,
+
+            preLoaders: Mix.options.vue.preLoaders,
+
+            postLoaders: Mix.options.vue.postLoaders
         }
     },
 
@@ -215,6 +241,17 @@ let rules = [
     }
 ];
 
+let sassRule = {
+    test: /\.s[ac]ss$/,
+    loaders: ['style-loader', 'css-loader', 'sass-loader']
+};
+
+if (Mix.preprocessors) {
+    sassRule.exclude = Mix.preprocessors.map(preprocessor => preprocessor.test());
+}
+
+rules.push(sassRule);
+
 if (Mix.preprocessors) {
     Mix.preprocessors.forEach(preprocessor => {
         rules.push(preprocessor.rules());
@@ -223,7 +260,7 @@ if (Mix.preprocessors) {
     });
 }
 
-module.exports.module = { rules }
+module.exports.module = { rules };
 
 
 
@@ -288,7 +325,7 @@ module.exports.performance = { hints: false };
  |
  */
 
-module.exports.devtool = Mix.sourcemaps;
+module.exports.devtool = Mix.options.sourcemaps;
 
 
 
@@ -386,18 +423,14 @@ if (Mix.options.notifications) {
     );
 }
 
-if (Mix.copy) {
-    Mix.copy.forEach(copy => {
-        plugins.push(
-            new webpackPlugins.CopyWebpackPlugin([copy])
-        );
-    });
+if (Mix.copy.length) {
+    new webpackPlugins.CopyWebpackPlugin(Mix.copy);
 }
 
-if (Mix.extract) {
+if (Mix.entry().hasExtractions()) {
     plugins.push(
         new webpack.optimize.CommonsChunkPlugin({
-            names: Mix.entryBuilder.extractions,
+            names: Mix.entry().getExtractions(),
             minChunks: Infinity
         })
     );
@@ -415,8 +448,8 @@ if (Mix.options.purifyCss) {
 
     // By default, we'll scan all Blade and Vue files in our project.
     let paths = glob.sync(Mix.Paths.root('resources/views/**/*.blade.php')).concat(
-        Mix.js.reduce((carry, js) => {
-            return carry.concat(glob.sync(js.entry.map(entry => entry.base) + '/**/*.vue'));
+        Mix.entry().scripts.reduce((carry, js) => {
+            return carry.concat(glob.sync(js.base + '/**/*.vue'));
         }, [])
     );
 
@@ -425,23 +458,29 @@ if (Mix.options.purifyCss) {
     ));
 }
 
-if (Mix.inProduction) {
+if (Mix.inProduction && Mix.options.uglify) {
     plugins.push(
-        new webpack.DefinePlugin({
-            'process.env': {
-                NODE_ENV: '"production"'
-            }
-        }),
-
         new webpack.optimize.UglifyJsPlugin(Mix.options.uglify)
     );
 }
 
 plugins.push(
+    new webpack.DefinePlugin(
+        Mix.definitions({
+            NODE_ENV: Mix.inProduction
+                ? 'production'
+                : ( process.env.NODE_ENV || 'development' )
+        })
+    ),
+
     new webpackPlugins.WebpackOnBuildPlugin(
-        stats => Mix.events.fire('build', stats)
+        stats => global.events.fire('build', stats)
     )
 );
+
+if (! Mix.entry().hasScripts()) {
+    plugins.push(new webpackPlugins.MockEntryPlugin(Mix.output().path));
+}
 
 module.exports.plugins = plugins;
 
