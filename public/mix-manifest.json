@@ -3,5 +3,6 @@
   "/js/renderer2.js": "/js/renderer2.js",
   "/js/app.js": "/js/app.js",
   "/css/app.css": "/css/app.css",
-  "/js/polyfill.js": "/js/polyfill.js"
+  "/js/polyfill.js": "/js/polyfill.js",
+  "/mix.js": "/mix.js"
 }
